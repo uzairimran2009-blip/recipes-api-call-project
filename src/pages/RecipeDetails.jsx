@@ -18,7 +18,7 @@ const RecipeDetails = () => {
 
   useEffect(() => {
     getRecipe();
-  }, []);
+  });
 
   if (!recipe) return <h2 className="loading">Loading...</h2>;
 
