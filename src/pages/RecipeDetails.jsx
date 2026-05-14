@@ -36,7 +36,7 @@ const RecipeDetails = () => {
           <b>Reviews:</b> {recipe.reviewCount}
         </p>
         <p>
-          <b>Calories Per Serving:</b> ⭐ {recipe.CaloriesPerServing} kcal
+          <b>Calories Per Serving:</b> ⭐ {recipe.caloriesPerServing} kcal
         </p>
         <p>
           <b>Servings:</b> {recipe.servings}
@@ -47,7 +47,7 @@ const RecipeDetails = () => {
         <div className="ingredients">
           <h3>Ingredients:</h3>
           <ul>
-            {recipe.ingredients.map((ingredient, index) => (
+            {recipe?.ingredients?.map((ingredient, index) => (
               <li key={index}>{ingredient}</li>
             ))}
           </ul>
@@ -55,7 +55,7 @@ const RecipeDetails = () => {
         <div className="instructions">
           <h3>Instructions:</h3>
           <ol>
-            {recipe.instructions.map((step, index) => (
+            {recipe?.instructions?.map((step, index) => (
               <li key={index}>{step}</li>
             ))}
           </ol>
